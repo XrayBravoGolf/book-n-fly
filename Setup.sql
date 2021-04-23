@@ -1,0 +1,5 @@
+CREATE DATABASE "booknfly"
+WITH
+  OWNER = "xux8"
+  ENCODING = 'UTF8'
+;
