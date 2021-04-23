@@ -6,3 +6,4 @@ Frontend proxy
 ## Database
 
 create db
+users table
