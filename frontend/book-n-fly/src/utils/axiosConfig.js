@@ -1,5 +1,6 @@
 import axios from 'axios';
 import router from '@/router';
+import * as API from '@/api.js';
 
 // axios instance configs
 const $myAxios = axios.create({
