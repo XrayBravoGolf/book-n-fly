@@ -8,8 +8,8 @@ module.exports = {
         target: proxyTarget,
         ws: true,
         changeOrigin: true
-      },
+      }
     },
-    useLocalIp: false,
+    useLocalIp: false
   }
 }
