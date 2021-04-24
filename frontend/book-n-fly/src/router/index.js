@@ -31,8 +31,18 @@ const routes = [
   }
 ]
 function authenticated () {
-function authenticated(){
-
+  myAxios.get(API.CHECKLOGIN).then(
+    res => {
+      if (res.request.status !== 200) { //maybe 403
+        return false
+      } else {
+        return true
+      }
+    },
+    error => {
+      return false
+    }
+  );
 }
 const router = new VueRouter({
   routes
