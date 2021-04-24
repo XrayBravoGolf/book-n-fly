@@ -1,11 +1,9 @@
 const express = require('express')
-const multer = require('multer')
+const bodyParserjson = require('body-parser').json
 const { login, verifyToken } = require('../controllers/users')
-
-const upload = multer()
 
 const router = express.Router()
 
-router.post('/login', upload.none(), login)
+router.post('/login', bodyParserjson(), login)
 
 module.exports = router
