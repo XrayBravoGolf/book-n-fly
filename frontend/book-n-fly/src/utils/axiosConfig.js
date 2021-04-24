@@ -4,7 +4,7 @@ import * as API from '@/api.js'
 
 // axios instance configs
 const $myAxios = axios.create({
-  timeout: 30
+  timeout: 30000
 })
 $myAxios.all = axios.all
 

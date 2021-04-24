@@ -7,8 +7,8 @@
         <input type="password" v-model="loginForm.password">
     </form>
     <div class="login_action_status">
-      <button class="login_button" v-if="!in_progress" @click="handleLogin">Login</button>
-      <p class="login_message" v-if="!login_message===''"></p>
+      <button class="login_button" @click="handleLogin">Login</button>
+      <p class="login_message" v-if="!(login_message==='')">{{login_message}}</p>
     </div>
   </div>
 </template>
@@ -49,6 +49,9 @@ export default {
           window.sessionStorage.setItem('Authorization', JSON.stringify(Authorization))
           proto.$router.push({ path: 'schedule' })
         }
+      }).catch(error => {
+        this.login_message = error.message
+        console.log(error)
       })
     }
   }
