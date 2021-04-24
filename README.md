@@ -4,6 +4,8 @@
 Vue 3
 Frontend proxy
 axios
+signin
+auth
 
 ## Database
 
