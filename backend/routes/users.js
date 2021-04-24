@@ -1,10 +1,11 @@
-const express = require('express');
-const { login, verifyToken } = require('../controllers/users');
-const multer = require('multer');
-upload = multer()
+const express = require('express')
+const multer = require('multer')
+const { login, verifyToken } = require('../controllers/users')
 
-const router = express.Router();
+const upload = multer()
 
-router.post('/login',upload.none(), login);
+const router = express.Router()
+
+router.post('/login', upload.none(), login)
 
 module.exports = router
