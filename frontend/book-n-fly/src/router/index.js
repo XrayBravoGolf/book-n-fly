@@ -6,7 +6,6 @@ import { myAxios } from '@/utils/axiosConfig.js'
 import Login from '@/views/Login.vue'
 import Schedule from '@/views/Schedule.vue'
 
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,7 +32,7 @@ const routes = [
 function authenticated () {
   myAxios.get(API.CHECKLOGIN).then(
     res => {
-      if (res.request.status !== 200) { //maybe 403
+      if (res.request.status !== 200) { // maybe 403
         return false
       } else {
         return true
@@ -42,7 +41,7 @@ function authenticated () {
     error => {
       return false
     }
-  );
+  )
 }
 const router = new VueRouter({
   routes
