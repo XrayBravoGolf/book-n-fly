@@ -22,7 +22,7 @@ $myAxios.interceptors.request.use(config => {
 
 // http status code = 401
 function backToLogin () {
-  window.sessionStorage.removeItem('authorization')
+  window.sessionStorage.removeItem('Authorization')
   router.push('/login')
 }
 
