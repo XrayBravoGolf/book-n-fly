@@ -1,2 +1,2 @@
 const CONTEXT = '/api'
-export const LOGIN = `${CONTEXT}/login`;
+export const LOGIN = `${CONTEXT}/login`
