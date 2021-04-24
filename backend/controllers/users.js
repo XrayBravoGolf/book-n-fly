@@ -1,5 +1,5 @@
 const { generateToken } = require('../util/auth')
-const { db } = require('../db')
+const { db } = require('../util/db')
 
 const login = async (req, res) => {
   const { email, password } = req.body

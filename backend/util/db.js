@@ -1,6 +1,7 @@
 const { Pool } = require('pg')
+require('dotenv').config()
 
-const connectionString = 'postgresql://dbuser:secretpassword@database.server.com:3211/mydb' // TODO use .env
+const connectionString = process.env.DATABASE_URL
 const pool = new Pool({
   connectionString
 })
