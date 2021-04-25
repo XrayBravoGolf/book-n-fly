@@ -7,6 +7,14 @@ axios
 signin
 auth
 
+## Backend
+
+API
+database
+jsonwebtoken
+authentication
+
+
 ## Database
 
 create db
