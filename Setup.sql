@@ -1,8 +1,3 @@
-CREATE DATABASE "booknfly"
-WITH
-  ENCODING = 'UTF8'
-;
-
 CREATE TABLE "public"."users" (
   "email" varchar(128) NOT NULL,
   "password" varchar(128) NOT NULL,
@@ -12,3 +7,4 @@ CREATE TABLE "public"."users" (
 )
 ;
 ALTER TABLE "public"."users" ADD CONSTRAINT "users_pkey" PRIMARY KEY ("email");
+INSERT INTO "public"."users" VALUES ('xux8@rpi.edu', 'xux8', 'Adam', 'Xu', 'f');
