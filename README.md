@@ -12,24 +12,25 @@ This is a single-page application
 Vue 3, axios, less 
 
 ### Routing
+vue-router is used; a dedicated configuration file for the router is used to specify pages to frontend routes.
 
 ### Authentication
-Upon login, backend sends a jwt token, which is stored in `window.sessionStorage`; this string is subsequently sent on all API calls by the frontend, through a request filter by axios
+Upon login, backend sends a jwt token, which is stored in `window.sessionStorage`; this string is subsequently retrieved and sent on all API calls by the frontend, through a request interceptor by axios.
+
 Certain routes require authentication, which are designated in the router file; the `router.beforeEach((to, from, next) => {})` allowed the frontend to make decisions on whether to continue routing or redirect to login page, by making an http request with stored
 
 ### API
-A dedicated file keeps all APIs used together; pages refer to the variables inside api.js for their request
+axios is used on all frontend requests
+A dedicated file keeps all APIs used together; pages refer to the variables inside api.js for their request.
+Both 
 
+### Webpack DevServer
+The devserver is configured to proxy requests to the listening backend. The benefit is that it simulates a production environment in which both the frontend and the backend APIs are from the same host (and the same port), so the frontend and backend do not need to worry about cross-site issues. 
+In addition, the DevServer made hot-reloading possible, that is the ability to see changes reflected as soon as source file is saved on disk, without even the need to hit refresh on brower.
 
-signin
-auth
-
-TODO:
-bookings page
-check out page
-check in page
 
 ## Backend
+
 
 API
 database
