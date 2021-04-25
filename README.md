@@ -30,13 +30,14 @@ In addition, the DevServer made hot-reloading possible, that is the ability to s
 
 
 ## Backend
+### Technology stack
+Express, Postgres
 
+### Authentication
+jsonwebtoken, or jwt is used in this project; this is picked over session cookies because tokens enable use on distributed systems and do not rely on *state* of a specific server to function.
 
-API
-database
-jsonwebtoken
-authentication
-
+### Other notes
+Code base separated to router, controller, utilities and an index.js to start server. The server uses dotenv to add environment variables from a file, in which security-critical details like database connection string and jwt key.
 
 ## Database
 
